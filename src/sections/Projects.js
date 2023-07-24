@@ -12,9 +12,28 @@ function Project({ project }) {
 }
 
 function Projects() {
+  const username = "sevkeoss";
+
+  const fetchPublicRepos = async () => {
+    try {
+      const response = await fetch(
+        `https://api.github.com/users/${username}/repos`
+      );
+      const data = await response.json();
+
+      return data.filter((repo) => !repo.private); // Filter out private repositories
+    } catch (error) {
+      console.error("Error fetching public repositories:", error.message);
+      return [];
+    }
+  };
+
+  // fetchPublicRepos()
+  //   .then((repos) => console.log(repos.map((repo) => repo)))
+  //   .catch((error) => console.error("Error:", error.message));
   return (
     <div id="Projects" className="flex flex-col bg-white py-10 space-y-4">
-      <h1 className="text-center text-blue-700 text-3xl font-bold">Projects</h1>
+      <h1 className="text-center text-blue-700 text-4xl font-bold">Projects</h1>
       <div className="grid grid-cols-2 w-3/4 mx-auto gap-2">
         {projects.map((project, i) => (
           <Project key={i} project={project} />

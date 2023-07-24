@@ -1,6 +1,7 @@
 import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
 import Home from "./sections/Home";
+import TechStack from "./sections/TechStack";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Home />
       <Experience />
       <Projects />
+      <TechStack />
     </div>
   );
 }
