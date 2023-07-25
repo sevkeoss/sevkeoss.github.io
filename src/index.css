@@ -4,14 +4,14 @@
 
 @layer components {
   .tech-icon {
-    @apply text-blue-700 text-8xl font-bold;
+    @apply text-blue-700 text-5xl md:text-8xl font-bold;
   }
 
   .media-icon {
-    @apply text-black text-6xl font-bold;
+    @apply text-black text-5xl md:text-6xl font-bold;
   }
 
   .nav-link {
-    @apply text-xl font-semibold p-3 rounded-xl ease-in-out duration-300 hover:bg-black hover:text-white;
+    @apply font-semibold p-1 md:p-3 rounded-xl ease-in-out duration-300 hover:bg-black hover:text-white text-base md:text-xl;
   }
 }
