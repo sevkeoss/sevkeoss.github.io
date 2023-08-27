@@ -1,6 +1,7 @@
 import { FaTerminal, FaGithub, FaLinkedin } from "react-icons/fa6";
 import { GrMenu } from "react-icons/gr";
 import { useState } from "react";
+import photo from "../images/profile.jpg";
 
 function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -63,7 +64,7 @@ function Home() {
           <h1 className="text-blue-700 text-4xl md:text-6xl lg:text-7xl">
             Software Engineer
           </h1>
-          <div className="flex flex-row justify-center">
+          <div className="flex flex-row justify-center mt-4">
             <a
               href="https://github.com/sevkeoss?tab=repositories"
               target="_blank"
@@ -80,9 +81,8 @@ function Home() {
             </a>
           </div>
         </div>
-        <div className="flex bg-blue-500 p-4 rounded-lg shadow-md h-96 items-center">
-          <p className="text-white">Put photo/cartoon here</p>
-        </div>
+
+        <img src={photo} alt="profile picture" className="w-96 rounded-lg" />
       </div>
     </div>
   );

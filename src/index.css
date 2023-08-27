@@ -2,13 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 @layer components {
   .tech-icon {
-    @apply text-blue-700 text-5xl md:text-8xl font-bold;
+    @apply text-blue-700 text-5xl md:text-7xl font-bold;
   }
 
   .media-icon {
-    @apply text-black text-5xl md:text-6xl font-bold;
+    @apply text-black text-3xl md:text-5xl font-bold;
   }
 
   .nav-link {
